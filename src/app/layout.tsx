@@ -17,7 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="flex min-h-screen flex-col">
+        <main className="flex-1">
+          {children}
+        </main>
+
+        <footer className="text-center text-xs text-gray-400 py-6 px-4">
+          Disclaimer: This is an independent, unofficial calculator. Not affiliated with or endorsed by Bilt or Bilt Rewards. Calculations are estimates; refer to official terms for accuracy.
+        </footer>
+      </body>
     </html>
   )
 }
