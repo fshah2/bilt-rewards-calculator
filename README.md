@@ -51,56 +51,11 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Running Tests
-
-```bash
-npm test
-```
-
-For watch mode:
-```bash
-npm run test:watch
-```
-
-For UI mode:
-```bash
-npm run test:ui
-```
-
 ### Building for Production
 
 ```bash
 npm run build
 npm start
-```
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── layout.tsx          # Root layout
-│   ├── page.tsx            # Main calculator page
-│   └── globals.css         # Global styles
-├── components/
-│   ├── CardSelector.tsx
-│   ├── ModeToggle.tsx
-│   ├── HousingSection.tsx
-│   ├── HousingPaymentInput.tsx
-│   ├── SpendSection.tsx
-│   ├── ResultsSection.tsx
-│   ├── AccordionHowItWorks.tsx
-│   ├── ShareLinkButton.tsx
-│   ├── CompareCardsToggle.tsx
-│   ├── CompareCardsView.tsx
-│   └── Tooltip.tsx
-├── lib/
-│   ├── rules/
-│   │   ├── types.ts        # TypeScript types
-│   │   ├── calculator.ts   # Rules engine (pure functions)
-│   │   └── calculator.test.ts
-│   └── utils/
-│       └── urlState.ts     # URL encoding/decoding for share links
 ```
 
 ## Calculation Rules & Assumptions
@@ -157,17 +112,6 @@ src/
 ## Share Links
 
 The calculator supports sharing estimates via URL parameters. The state is encoded as base64 JSON in the `state` query parameter. When someone opens a shared link, the calculator automatically restores the inputs.
-
-## Testing
-
-Unit tests cover:
-- Housing payment calculations (both modes)
-- Card spend points for all three cards
-- Obsidian grocery cap logic
-- Bilt Cash calculations
-- Complete totals calculations
-
-All tests use Vitest and are located in `src/lib/rules/calculator.test.ts`.
 
 ## License
 
